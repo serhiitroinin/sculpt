@@ -1,0 +1,13 @@
+node_modules/
+dist/
+out/
+.build/
+.DS_Store
+*.log
+.demo/
+build/
+*.app
+.swiftpm/
+
+# A global ignore rule hides scripts/; this project needs it.
+!scripts/

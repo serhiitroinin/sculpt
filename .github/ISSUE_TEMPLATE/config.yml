@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/serhiitroinin/sculpt/security/advisories/new
+    about: Report vulnerabilities privately. Do not open a public issue.
+  - name: Reins
+    url: https://github.com/serhiitroinin/reins/issues
+    about: Report a problem in the Reins runtime or an engine adapter there.

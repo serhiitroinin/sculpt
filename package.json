@@ -1,0 +1,39 @@
+{
+  "name": "sculpt",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/main/main.cjs",
+  "scripts": {
+    "dev": "bun run scripts/dev.ts",
+    "dev:offline": "SCULPT_OFFLINE=1 bun run scripts/dev.ts",
+    "build": "bun run scripts/build.ts",
+    "start": "bun run scripts/build.ts && bunx --bun electron .",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test",
+    "e2e": "bun run scripts/e2e-check.ts",
+    "shots": "bun run scripts/shots.ts"
+  },
+  "dependencies": {
+    "@fontsource/ibm-plex-mono": "5.3.0",
+    "reins": "0.2.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "replicad": "1.1.0",
+    "replicad-opencascadejs": "1.1.0",
+    "three": "0.186.0"
+  },
+  "devDependencies": {
+    "@types/bun": "1.4.2",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.7",
+    "@types/three": "0.185.4",
+    "@vitejs/plugin-react": "6.1.1",
+    "electron": "43.4.1",
+    "typescript": "5.9.3",
+    "vite": "8.2.2"
+  },
+  "trustedDependencies": [
+    "electron"
+  ]
+}

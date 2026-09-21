@@ -1,0 +1,54 @@
+name: Bug report
+description: Report behavior that differs from the documentation.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not report security vulnerabilities here. Use the process in SECURITY.md.
+        Remove credentials, prompts, and account data from logs and screenshots before you paste them.
+  - type: input
+    id: commit
+    attributes:
+      label: Sculpt commit
+      placeholder: output of `git rev-parse --short HEAD`
+    validations:
+      required: true
+  - type: dropdown
+    id: engine
+    attributes:
+      label: Engine
+      options:
+        - Claude Code
+        - Codex
+        - Offline
+        - Not applicable
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: macOS version, Bun version, and the engine command-line tool version.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: The smallest sequence that shows the problem. Say whether the offline engine shows it too. Paste the model script when a build is involved.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: Include the error text from the chat, the build row, or the terminal.
+    validations:
+      required: true
